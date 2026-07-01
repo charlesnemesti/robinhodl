@@ -14,7 +14,7 @@
     rpcUrl: 'https://rpc.mainnet.chain.robinhood.com',
     tokenAddress: '',
     tokenName: 'RobinHodl',
-    tokenSymbol: 'HODL',
+    tokenSymbol: 'ROBINHODL',
     bondingTargetEth: 4.2,
     totalSupply: 1_000_000_000,
     copyFeedbackMs: 2000,

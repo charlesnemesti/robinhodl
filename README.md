@@ -1,4 +1,4 @@
-# RobinHodl ($HODL)
+# RobinHodl ($ROBINHODL)
 
 Single-page Web3 landing for **RobinHodl** — a cypherpunk meme token on **Robinhood Chain**, launched via [NOXA Fun](https://fun.noxa.fi/robinhood).
 
