@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="RobinHodl ($HODL) on Robinhood Chain — launched via NOXA Fun. We take from the jeets and give to the HODLers." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <meta name="theme-color" content="#CCFF00" />
   <title>RobinHodl ($HODL) — Robinhood Chain · NOXA Fun</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,20 +18,20 @@
       theme: {
         extend: {
           colors: {
-            forest: '#0B2F1D',
-            neon: '#00FFCC',
-            charcoal: '#121212',
-            'charcoal-light': '#1a1a1a',
-            'forest-light': '#0f3d26',
+            forest: '#111111',
+            neon: '#CCFF00',
+            charcoal: '#000000',
+            'charcoal-light': '#0a0a0a',
+            'forest-light': '#1a1a1a',
           },
           fontFamily: {
             mono: ['"Share Tech Mono"', 'Courier New', 'monospace'],
             pixel: ['"Press Start 2P"', 'monospace'],
           },
           boxShadow: {
-            neon: '0 0 12px rgba(0, 255, 204, 0.45)',
-            'neon-lg': '0 0 24px rgba(0, 255, 204, 0.55), 0 0 48px rgba(0, 255, 204, 0.2)',
-            'neon-sm': '0 0 8px rgba(0, 255, 204, 0.35)',
+            neon: '0 0 12px rgba(204, 255, 0, 0.45)',
+            'neon-lg': '0 0 24px rgba(204, 255, 0, 0.55), 0 0 48px rgba(204, 255, 0, 0.2)',
+            'neon-sm': '0 0 8px rgba(204, 255, 0, 0.35)',
           },
           animation: {
             'pulse-neon': 'pulseNeon 2.5s ease-in-out infinite',
@@ -38,8 +40,8 @@
           },
           keyframes: {
             pulseNeon: {
-              '0%, 100%': { boxShadow: '0 0 12px rgba(0, 255, 204, 0.35)' },
-              '50%': { boxShadow: '0 0 22px rgba(0, 255, 204, 0.65)' },
+              '0%, 100%': { boxShadow: '0 0 12px rgba(204, 255, 0, 0.35)' },
+              '50%': { boxShadow: '0 0 22px rgba(204, 255, 0, 0.65)' },
             },
             scanline: {
               '0%': { transform: 'translateY(-100%)' },
@@ -59,34 +61,34 @@
 
   <style>
     :root {
-      --forest: #0B2F1D;
-      --neon: #00FFCC;
-      --charcoal: #121212;
+      --forest: #111111;
+      --neon: #CCFF00;
+      --charcoal: #000000;
     }
 
     body {
       background-color: var(--charcoal);
       background-image:
-        radial-gradient(ellipse at 20% 0%, rgba(11, 47, 29, 0.55) 0%, transparent 55%),
-        radial-gradient(ellipse at 80% 100%, rgba(0, 255, 204, 0.06) 0%, transparent 50%),
-        linear-gradient(rgba(0, 255, 204, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 204, 0.03) 1px, transparent 1px);
+        radial-gradient(ellipse at 20% 0%, rgba(204, 255, 0, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 100%, rgba(204, 255, 0, 0.04) 0%, transparent 50%),
+        linear-gradient(rgba(204, 255, 0, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(204, 255, 0, 0.025) 1px, transparent 1px);
       background-size: auto, auto, 32px 32px, 32px 32px;
     }
 
     .retro-border {
       border: 2px solid var(--neon);
       box-shadow:
-        inset 0 0 0 1px rgba(0, 255, 204, 0.15),
-        0 0 0 2px var(--forest),
-        0 0 12px rgba(0, 255, 204, 0.25);
+        inset 0 0 0 1px rgba(204, 255, 0, 0.12),
+        0 0 0 2px #000000,
+        0 0 12px rgba(204, 255, 0, 0.22);
     }
 
     .retro-border::before {
       content: '';
       position: absolute;
       inset: 4px;
-      border: 1px dashed rgba(0, 255, 204, 0.2);
+      border: 1px dashed rgba(204, 255, 0, 0.18);
       pointer-events: none;
     }
 
@@ -96,7 +98,7 @@
 
     .btn-neon:hover {
       transform: scale(1.04);
-      box-shadow: 0 0 24px rgba(0, 255, 204, 0.6);
+      box-shadow: 0 0 24px rgba(204, 255, 0, 0.55);
     }
 
     .btn-neon:active {
@@ -105,7 +107,7 @@
 
     .stat-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.35);
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
     }
 
     .stat-card {
@@ -113,25 +115,26 @@
     }
 
     .terminal-window {
-      background: linear-gradient(180deg, #0a1f14 0%, #071510 100%);
+      background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
       border: 2px solid var(--neon);
       box-shadow:
         inset 0 0 40px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(0, 255, 204, 0.2);
+        0 0 20px rgba(204, 255, 0, 0.15);
     }
 
     .terminal-header {
-      background: linear-gradient(90deg, var(--forest) 0%, #0a2418 100%);
-      border-bottom: 1px solid rgba(0, 255, 204, 0.3);
+      background: linear-gradient(90deg, #111111 0%, #0a0a0a 100%);
+      border-bottom: 1px solid rgba(204, 255, 0, 0.25);
     }
 
     .scroll-container {
       background:
-        linear-gradient(180deg, #1a1208 0%, #0f0a05 8%, #1a1208 92%, #0f0a05 100%);
-      border: 3px double #8b6914;
+        linear-gradient(180deg, #111111 0%, #050505 8%, #111111 92%, #050505 100%);
+      border: 3px double var(--neon);
       box-shadow:
         inset 0 0 30px rgba(0, 0, 0, 0.6),
-        0 8px 32px rgba(0, 0, 0, 0.5);
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 16px rgba(204, 255, 0, 0.08);
     }
 
     .scroll-container::before,
@@ -143,18 +146,21 @@
       height: 12px;
       background: repeating-linear-gradient(
         90deg,
-        #8b6914 0px,
-        #c9a227 4px,
-        #8b6914 8px
+        #CCFF00 0px,
+        #e5ff66 4px,
+        #CCFF00 8px
       );
     }
 
     .scroll-container::before { top: -6px; border-radius: 4px 4px 0 0; }
     .scroll-container::after { bottom: -6px; border-radius: 0 0 4px 4px; }
 
-    .pixel-logo {
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
+    .brand-logo {
+      image-rendering: auto;
+    }
+
+    .logo-glow {
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.35);
     }
 
     .scanline-overlay {
@@ -169,8 +175,8 @@
     }
 
     .ca-widget.copied {
-      border-color: #00ff88;
-      box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+      border-color: #CCFF00;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
     }
 
     @media (max-width: 640px) {
@@ -186,33 +192,22 @@
   <header class="fixed top-0 left-0 right-0 z-40 bg-charcoal/90 backdrop-blur-md border-b border-neon/20">
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4" aria-label="Main navigation">
       <a href="#" class="flex items-center gap-3 group shrink-0">
-        <!-- Pixel-art logo placeholder -->
-        <svg class="pixel-logo w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="16" height="16" fill="#0B2F1D"/>
-          <rect x="4" y="2" width="8" height="3" fill="#00FFCC"/>
-          <rect x="3" y="5" width="10" height="4" fill="#00FFCC"/>
-          <rect x="5" y="9" width="2" height="2" fill="#00FFCC"/>
-          <rect x="9" y="9" width="2" height="2" fill="#00FFCC"/>
-          <rect x="6" y="11" width="4" height="2" fill="#00FFCC"/>
-          <rect x="2" y="6" width="2" height="6" fill="#0a5c38"/>
-          <rect x="12" y="6" width="2" height="6" fill="#0a5c38"/>
-          <polygon points="14,8 16,7 16,9" fill="#00FFCC"/>
-        </svg>
-        <span class="font-pixel text-neon text-[0.55rem] sm:text-xs tracking-wider group-hover:drop-shadow-[0_0_8px_rgba(0,255,204,0.8)] transition-all">
+        <img src="logo.png" alt="RobinHodl logo" class="brand-logo w-10 h-10 sm:w-12 sm:h-12 rounded-sm logo-glow group-hover:scale-105 transition-transform" />
+        <span class="font-pixel text-neon text-[0.55rem] sm:text-xs tracking-wider group-hover:drop-shadow-[0_0_8px_rgba(204,255,0,0.8)] transition-all">
           RobinHodl
         </span>
       </a>
 
       <div class="flex items-center gap-2 sm:gap-4">
         <div class="flex items-center gap-2 sm:gap-3">
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://x.com/RobinHodlRH" target="_blank" rel="noopener noreferrer"
              class="p-2 text-neon/80 hover:text-neon hover:shadow-neon-sm rounded transition-all"
              aria-label="Follow on X (Twitter)">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
           </a>
-          <a href="https://t.me" target="_blank" rel="noopener noreferrer"
+          <a href="https://t.me/RobinHodlRH" target="_blank" rel="noopener noreferrer"
              class="p-2 text-neon/80 hover:text-neon hover:shadow-neon-sm rounded transition-all"
              aria-label="Join Telegram">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -252,7 +247,9 @@
           </a>
         </div>
 
-        <h1 id="hero-heading" class="hero-title font-pixel text-neon text-lg sm:text-2xl md:text-3xl leading-relaxed mb-4 drop-shadow-[0_0_12px_rgba(0,255,204,0.4)]">
+        <img src="logo.png" alt="" aria-hidden="true" class="brand-logo w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-6 logo-glow" />
+
+        <h1 id="hero-heading" class="hero-title font-pixel text-neon text-lg sm:text-2xl md:text-3xl leading-relaxed mb-4 drop-shadow-[0_0_12px_rgba(204,255,0,0.35)]">
           ROBINHODL ($HODL)
         </h1>
 
@@ -263,7 +260,7 @@
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           <a href="https://fun.noxa.fi/robinhood" data-buy-link target="_blank" rel="noopener noreferrer"
-             class="btn-neon w-full sm:w-auto bg-neon text-charcoal font-pixel text-[0.6rem] sm:text-xs px-8 py-4 uppercase tracking-wider shadow-neon-lg hover:bg-neon/90">
+             class="btn-neon w-full sm:w-auto bg-neon text-black font-pixel text-[0.6rem] sm:text-xs px-8 py-4 uppercase tracking-wider shadow-neon-lg hover:bg-neon/90">
             Buy $HODL
           </a>
           <a href="https://fun.noxa.fi/robinhood" data-chart-link target="_blank" rel="noopener noreferrer"
@@ -349,37 +346,10 @@
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
-        <!-- Pixel character placeholder -->
+        <!-- Logo showcase -->
         <div class="flex justify-center md:justify-start">
-          <div class="relative retro-border bg-forest/40 p-6 sm:p-8 inline-block">
-            <svg class="pixel-logo w-48 h-48 sm:w-56 sm:h-56" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="RobinHodl pixel character with green hood and neon arrow">
-              <!-- Background -->
-              <rect width="32" height="32" fill="#0B2F1D"/>
-              <!-- Hood -->
-              <rect x="10" y="4" width="12" height="4" fill="#00FFCC"/>
-              <rect x="8" y="8" width="16" height="6" fill="#00FFCC"/>
-              <rect x="9" y="14" width="14" height="2" fill="#00a080"/>
-              <!-- Face -->
-              <rect x="12" y="12" width="2" height="2" fill="#121212"/>
-              <rect x="18" y="12" width="2" height="2" fill="#121212"/>
-              <rect x="14" y="15" width="4" height="1" fill="#121212"/>
-              <!-- Body / tunic -->
-              <rect x="11" y="16" width="10" height="8" fill="#0a5c38"/>
-              <rect x="13" y="18" width="6" height="4" fill="#0B2F1D"/>
-              <!-- Belt -->
-              <rect x="10" y="23" width="12" height="2" fill="#8b6914"/>
-              <!-- Legs -->
-              <rect x="12" y="25" width="3" height="5" fill="#0a5c38"/>
-              <rect x="17" y="25" width="3" height="5" fill="#0a5c38"/>
-              <!-- Bow -->
-              <rect x="4" y="17" width="2" height="8" fill="#8b6914"/>
-              <rect x="26" y="17" width="2" height="8" fill="#8b6914"/>
-              <rect x="2" y="19" width="4" height="4" fill="#00FFCC"/>
-              <!-- Neon arrow -->
-              <rect x="22" y="14" width="8" height="2" fill="#00FFCC"/>
-              <polygon points="30,15 28,12 28,18" fill="#00FFCC"/>
-              <rect x="20" y="13" width="2" height="4" fill="#00FFCC" opacity="0.6"/>
-            </svg>
+          <div class="relative retro-border bg-black p-4 sm:p-6 inline-block">
+            <img src="logo.png" alt="RobinHodl — raised fist with feather" class="brand-logo w-48 h-48 sm:w-56 sm:h-56 object-contain logo-glow" />
             <p class="text-center text-neon/50 text-xs mt-4 uppercase tracking-widest">RobinHodl.exe</p>
           </div>
         </div>
@@ -387,19 +357,19 @@
         <!-- Lore bullets -->
         <ul class="space-y-6">
           <li class="flex gap-4 items-start group">
-            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(0,255,204,0.8)]">&gt;&gt;</span>
+            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(204,255,0,0.8)]">&gt;&gt;</span>
             <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
               Deployed on <span class="text-neon">Robinhood Chain</span> via <a href="https://fun.noxa.fi/robinhood" class="text-neon underline hover:no-underline" target="_blank" rel="noopener noreferrer">NOXA Fun</a> — tradable on Uniswap V3 from block one. The Sheriffs turned off the buy button; we turned on the <span class="text-neon">HODL button</span>.
             </p>
           </li>
           <li class="flex gap-4 items-start group">
-            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(0,255,204,0.8)]">&gt;&gt;</span>
+            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(204,255,0,0.8)]">&gt;&gt;</span>
             <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
               <span class="text-neon">Zero token taxes.</span> Only the built-in 1% Uniswap V3 pool fee. LP locked forever in the <a href="https://docs.noxa.fi/contracts/noxa-fun/" class="text-neon/80 underline hover:no-underline" target="_blank" rel="noopener noreferrer">NOXA Launch Locker</a> — no rug from Nottingham Castle.
             </p>
           </li>
           <li class="flex gap-4 items-start group">
-            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(0,255,204,0.8)]">&gt;&gt;</span>
+            <span class="text-neon font-pixel text-[0.5rem] mt-1 shrink-0 group-hover:drop-shadow-[0_0_6px_rgba(204,255,0,0.8)]">&gt;&gt;</span>
             <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
               <span class="text-neon">Anti-Jeet mechanics:</span> Graduation at 4.2 ETH net buy on Robinhood Chain. Diamond hands get the loot; paper hands get yeeted into Sherwood Forest.
             </p>
@@ -441,40 +411,40 @@
         <!-- Medieval scroll -->
         <div class="scroll-container relative rounded-lg px-6 sm:px-8 py-10 sm:py-12">
           <div class="relative z-10 text-center">
-            <p class="text-yellow-600/80 font-pixel text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.2em] mb-6">
+            <p class="text-neon/70 font-pixel text-[0.5rem] sm:text-[0.55rem] uppercase tracking-[0.2em] mb-6">
               ~ Royal Decree ~
             </p>
-            <p class="text-amber-100/90 text-lg sm:text-xl mb-6 leading-relaxed">
+            <p class="text-gray-200 text-lg sm:text-xl mb-6 leading-relaxed">
               Total Supply
             </p>
-            <p class="text-neon font-pixel text-sm sm:text-base mb-8 drop-shadow-[0_0_8px_rgba(0,255,204,0.4)]">
+            <p class="text-neon font-pixel text-sm sm:text-base mb-8 drop-shadow-[0_0_8px_rgba(204,255,0,0.35)]">
               1,000,000,000 $HODL
             </p>
 
             <div class="space-y-4 text-left max-w-xs mx-auto">
-              <div class="flex justify-between items-center border-b border-amber-900/40 pb-2">
-                <span class="text-amber-200/70 text-sm">Single-Sided V3 LP</span>
+              <div class="flex justify-between items-center border-b border-neon/20 pb-2">
+                <span class="text-gray-300 text-sm">Single-Sided V3 LP</span>
                 <span class="text-neon font-bold">100%</span>
               </div>
-              <div class="w-full bg-charcoal/50 h-3 rounded overflow-hidden">
+              <div class="w-full bg-black/60 h-3 rounded overflow-hidden border border-neon/10">
                 <div class="bg-neon h-full w-full shadow-neon-sm"></div>
               </div>
 
-              <div class="flex justify-between items-center border-b border-amber-900/40 pb-2 pt-2">
-                <span class="text-amber-200/70 text-sm">Token Tax</span>
+              <div class="flex justify-between items-center border-b border-neon/20 pb-2 pt-2">
+                <span class="text-gray-300 text-sm">Token Tax</span>
                 <span class="text-neon font-bold">0%</span>
               </div>
-              <div class="w-full bg-charcoal/50 h-3 rounded overflow-hidden">
+              <div class="w-full bg-black/60 h-3 rounded overflow-hidden border border-neon/10">
                 <div class="bg-red-500/40 h-full w-0"></div>
               </div>
 
-              <div class="flex justify-between items-center border-b border-amber-900/40 pb-2 pt-2">
-                <span class="text-amber-200/70 text-sm">Graduation Target</span>
+              <div class="flex justify-between items-center border-b border-neon/20 pb-2 pt-2">
+                <span class="text-gray-300 text-sm">Graduation Target</span>
                 <span class="text-neon font-bold">4.2 ETH</span>
               </div>
             </div>
 
-            <p class="text-amber-200/50 text-xs mt-8 italic">
+            <p class="text-neon/40 text-xs mt-8 italic">
               "LP locked in NOXA Launch Locker on Robinhood Chain. The Sheriff can't touch this gold."
             </p>
           </div>
@@ -488,7 +458,7 @@
         <p class="font-pixel text-neon text-[0.6rem] sm:text-xs uppercase tracking-wider mb-2">Ready to join the Merry HODLers?</p>
         <p class="text-neon/50 text-xs mb-5">Trade on Robinhood Chain · Connect wallet to chain ID 4663</p>
         <a href="https://fun.noxa.fi/robinhood" data-buy-link target="_blank" rel="noopener noreferrer"
-           class="btn-neon inline-block bg-neon text-charcoal font-pixel text-[0.6rem] sm:text-xs px-10 py-4 uppercase tracking-wider shadow-neon-lg hover:bg-neon/90">
+           class="btn-neon inline-block bg-neon text-black font-pixel text-[0.6rem] sm:text-xs px-10 py-4 uppercase tracking-wider shadow-neon-lg hover:bg-neon/90">
           Buy $HODL on NOXA Fun
         </a>
       </div>
@@ -518,13 +488,13 @@
              class="text-neon/60 hover:text-neon transition-colors text-xs uppercase tracking-wider" aria-label="NOXA Fun">
             NOXA
           </a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+          <a href="https://x.com/RobinHodlRH" target="_blank" rel="noopener noreferrer"
              class="text-neon/60 hover:text-neon transition-colors" aria-label="X (Twitter)">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
             </svg>
           </a>
-          <a href="https://t.me" target="_blank" rel="noopener noreferrer"
+          <a href="https://t.me/RobinHodlRH" target="_blank" rel="noopener noreferrer"
              class="text-neon/60 hover:text-neon transition-colors" aria-label="Telegram">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
